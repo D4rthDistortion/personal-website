@@ -52,3 +52,110 @@ margin: 100px auto;
 .logo {
     margin-left: 10px;
 }
+
+/* === BassBot Styles === */
+#bassbot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+  }
+  
+  #bassbot {
+    position: relative;
+    width: 120px;
+    height: 220px;
+    background: linear-gradient(orange, red);
+    border: 3px solid black;
+    border-radius: 20% 20% 10% 10%;
+    box-shadow: 0 0 15px #444;
+    margin-bottom: 1rem;
+    animation: blink 6s infinite;
+  }
+  
+  .face {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .eye {
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .mouth {
+    width: 40px;
+    height: 10px;
+    background: gray;
+    margin: 10px auto 0;
+    border-radius: 5px;
+    transition: transform 0.2s;
+  }
+  
+  .arms .arm {
+    width: 10px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    top: 80px;
+    border-radius: 5px;
+    transform-origin: top;
+  }
+  
+  .left-arm {
+    left: -10px;
+  }
+  
+  .right-arm {
+    right: -10px;
+  }
+  
+  .guitar-body {
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to bottom, #444, #222);
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 40% 40%;
+  }
+  
+  #chat-ui {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  #chat-log {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  #chat-input {
+    width: 70%;
+    padding: 0.5rem;
+  }
+  
+  button {
+    padding: 0.5rem;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* === Animations === */
+  @keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+  }
+  
